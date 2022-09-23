@@ -12,3 +12,5 @@ This project is a web application developed with Asp.Net Core MVC and it works o
  * MVC
  * Repository Pattern
  * Unit of Work Pattern
+
+<b>Some visuals about Application</b><br>
