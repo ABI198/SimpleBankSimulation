@@ -1,0 +1,46 @@
+﻿@model List<AccountShowModel>
+
+@{
+    //Layout
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //General
+    var accountShowModelList = Model;
+}
+
+<div class="row">
+    <div class="col-4">
+        <h5 class="card-title">User Information</h5>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <p class="card-text"> Name : @ViewBag.FullName </p>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Return to User List</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <h5 class="card-title">Account Information</h5>
+        @if (accountShowModelList.Count > 0)
+        {
+            int accountNumber = 0;
+            foreach (var accountShowModel in accountShowModelList)
+            {
+                ++accountNumber;
+                <div class="card" style="width: 28rem;">
+                    <div class="card-body">
+                        <p>Account @accountNumber</p>
+                        <p class="card-text">Balance : @accountShowModel.Balance</p>
+                        <p>Account Number : @accountShowModel.AccountNumber</p>
+                        <a asp-controller="Account" asp-action="SendMoney" asp-route-accountId="@accountShowModel.Id" class="btn btn-primary">Send Money</a>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-warning" role="alert">
+                No account found for the relevant user.
+            </div>
+        }
+    </div>
+</div>

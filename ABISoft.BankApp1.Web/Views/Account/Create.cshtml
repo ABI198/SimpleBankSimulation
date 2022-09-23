@@ -1,0 +1,40 @@
+﻿@model UserListModel
+
+@{
+    //Layout
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //General
+    var userListModel = Model;
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2>Information of Selected User</h2>
+        <hr />
+        <p>Firstname : @userListModel.Firstname</p>
+        <p>Lastname  : @userListModel.Lastname</p>
+        <p>Account Count : <accountCount user-id="@userListModel.Id"></accountCount> </p>
+    </div>
+    <div class="col-6">
+        <h2>Create Account</h2>
+        <hr />
+        <form action="Create" method="post">
+            <div hidden class="form-group">
+                <label for="userid">Id :</label>
+                <input type="text" id="userid" name="userid" value="@userListModel.Id" class="form-control" placeholder="Id">
+            </div>
+            <div class="form-group">
+                <label for="balance">Balance :</label>
+                <input type="text" id="balance" name="balance" class="form-control" placeholder="Balance">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="accountNumber">Account Number :</label>
+                <input type="text" id="accountNumber" name="accountNumber" class="form-control" placeholder="Account Number">
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>
