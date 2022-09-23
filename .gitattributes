@@ -63,8 +63,5 @@
 #*.RTF   diff=astextplain
 
  
-*.html -linguist-detectable
-*.scss -linguist-detectable
-*.JavaScript -linguist-detectable
-*.jquery -linguist-detectable
-*.bootstrap -linguist-detectable
+*.C# -linguist-detectable
+
