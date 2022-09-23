@@ -65,4 +65,4 @@
  
 *.html -linguist-detectable
 *.scss -linguist-detectable
-
+*.js -linguist-detectable
