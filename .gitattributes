@@ -66,3 +66,5 @@
 *.html -linguist-detectable
 *.scss -linguist-detectable
 *.javascript -linguist-detectable
+*.jquery -linguist-detectable
+*.bootstrap -linguist-detectable
