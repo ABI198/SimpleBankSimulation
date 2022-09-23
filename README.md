@@ -6,6 +6,7 @@ This project is a web application developed with Asp.Net Core MVC and it works o
  * LINQ
  * Asp.Net Core MVC 
  * Entity Framework 
+ * MSSQL
 
 <b>Design Principles Used</b><br>
  * MVC
