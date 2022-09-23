@@ -63,5 +63,5 @@
 #*.RTF   diff=astextplain
 
  
-*.C# -linguist-detectable
+*.Sass/SCSS -linguist-detectable
 
